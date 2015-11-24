@@ -12,9 +12,11 @@ var webpackConfig = {
       PROJECT_BASE + '/src/app.js'
     ],
     vendor : [
+      'history',
       'react',
       'redux',
-      'react-redux'
+      'react-redux',
+      'react-router'
     ]
   },
   output : {
