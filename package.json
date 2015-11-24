@@ -1,0 +1,36 @@
+{
+  "name": "react-hot-reload-minimal-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+  },
+  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "chalk": "^1.1.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.0.0",
+    "babel-plugin-react-transform": "^1.1.0",
+    "babel-runtime": "^5.8.20",
+    "chai-as-promised": "^5.1.0",
+    "extract-text-webpack-plugin": "^0.9.0",
+    "html-webpack-plugin": "^1.6.1",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.0",
+    "redbox-react": "^1.0.4",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
