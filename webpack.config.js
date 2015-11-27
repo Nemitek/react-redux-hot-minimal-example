@@ -14,6 +14,8 @@ var webpackConfig = {
     vendor : [
       'react',
       'redux',
+      'freezer-js',
+      'react-bootstrap',
       'react-redux'
     ]
   },
@@ -64,14 +66,30 @@ var webpackConfig = {
             }
           }
         }
-      }
+      },
+      {
+        test    : /\.scss$/,
+        loaders : [
+          'style-loader',
+          'css-loader',
+          'autoprefixer?browsers=last 2 version',
+          'sass-loader'
+        ]
+      },
+      /* eslint-disable */
+      { test: /\.woff(\?.*)?$/,  loader: "url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff" },
+      { test: /\.woff2(\?.*)?$/, loader: "url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2" },
+      { test: /\.ttf(\?.*)?$/,   loader: "url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream" },
+      { test: /\.eot(\?.*)?$/,   loader: "file-loader?prefix=fonts/&name=[path][name].[ext]" },
+      { test: /\.svg(\?.*)?$/,   loader: "url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml" }
+      /* eslint-enable */
     ]
   }
 };
 
 // Simulate config overrides for dev_hot
 webpackConfig.entry.app.push(
-  'webpack-dev-server/client?http://localhost:3000/',
+  'webpack-dev-server/client?http://0.0.0.0:3000/',
   'webpack/hot/dev-server'
 );
 
