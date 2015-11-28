@@ -16,8 +16,8 @@ var server = new WebpackDevServer(webpack(webpackConfig), {
   historyApiFallback : true
 });
 
-server.listen(3000, 'localhost', function () {
+server.listen(3000, '0.0.0.0', function () {
   console.log(chalk.green(
-    'webpack-dev-server is now running at localhost:3000'
+    'webpack-dev-server is now running at 0.0.0.0:3000'
   ));
 });
