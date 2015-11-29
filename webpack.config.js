@@ -16,7 +16,8 @@ var webpackConfig = {
       'redux',
       'freezer-js',
       'react-bootstrap',
-      'react-redux'
+      'redux-router',
+      'rx'
     ]
   },
   output : {
